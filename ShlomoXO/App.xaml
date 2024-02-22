@@ -4,6 +4,16 @@
              xmlns:local="clr-namespace:ShlomoXO"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-        <local:CharToBrushConverter x:Key="charToBrushConverter" />
+        <!--<local:CharToBrushConverter x:Key="charToBrushConverter" />-->
+        <Style TargetType="TextBox" x:Key="TextBoxXO">
+            <Style.Triggers>
+                <Trigger Property="Text" Value='x'>
+                    <Setter Property="Foreground" Value="Red" />
+                </Trigger>
+                <Trigger Property="Text" Value='o'>
+                    <Setter Property="Foreground" Value="Green" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
     </Application.Resources>
 </Application>

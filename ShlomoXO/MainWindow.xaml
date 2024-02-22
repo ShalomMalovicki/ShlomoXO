@@ -7,7 +7,6 @@
         FontSize="40"
         mc:Ignorable="d"
         Title="MainWindow" Height="265" Width="220">
-  
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="25" />
@@ -33,16 +32,15 @@
             <ColumnDefinition Width="60" />
             <ColumnDefinition Width="60" />
         </Grid.ColumnDefinitions>
-        <TextBox TextAlignment="Center"  Grid.Row="0" Grid.Column="0"  Text="{Binding Path=Board[0],UpdateSourceTrigger=PropertyChanged}" Foreground="{Binding Path=Board[0], UpdateSourceTrigger=PropertyChanged, Converter={StaticResource charToBrushConverter}}" />
-        <TextBox TextAlignment="Center" Grid.Row="0" Grid.Column="1"  Text="{Binding Path=Board[1], UpdateSourceTrigger=PropertyChanged}" Foreground="{Binding Path=Board[1], UpdateSourceTrigger=PropertyChanged, Converter={StaticResource charToBrushConverter}}" />
-        <TextBox TextAlignment="Center" Grid.Row="0" Grid.Column="2"  Text="{Binding Path=Board[2], UpdateSourceTrigger=PropertyChanged}" Foreground="{Binding Path=Board[2], UpdateSourceTrigger=PropertyChanged, Converter={StaticResource charToBrushConverter}}" />
-        <TextBox TextAlignment="Center" Grid.Row="1" Grid.Column="0"  Text="{Binding Path=Board[3], UpdateSourceTrigger=PropertyChanged}" Foreground="{Binding Path=Board[3], UpdateSourceTrigger=PropertyChanged, Converter={StaticResource charToBrushConverter}}" />
-        <TextBox TextAlignment="Center" Grid.Row="1" Grid.Column="1"  Text="{Binding Path=Board[4], UpdateSourceTrigger=PropertyChanged}" Foreground="{Binding Path=Board[4], UpdateSourceTrigger=PropertyChanged, Converter={StaticResource charToBrushConverter}}" />
-        <TextBox TextAlignment="Center" Grid.Row="1" Grid.Column="2"  Text="{Binding Path=Board[5], UpdateSourceTrigger=PropertyChanged}" Foreground="{Binding Path=Board[5], UpdateSourceTrigger=PropertyChanged, Converter={StaticResource charToBrushConverter}}" />
-        <TextBox TextAlignment="Center" Grid.Row="2" Grid.Column="0"  Text="{Binding Path=Board[6], UpdateSourceTrigger=PropertyChanged}" Foreground="{Binding Path=Board[6], UpdateSourceTrigger=PropertyChanged, Converter={StaticResource charToBrushConverter}}" />
-        <TextBox TextAlignment="Center" Grid.Row="2" Grid.Column="1"  Text="{Binding Path=Board[7], UpdateSourceTrigger=PropertyChanged}" Foreground="{Binding Path=Board[7], UpdateSourceTrigger=PropertyChanged, Converter={StaticResource charToBrushConverter}}" />
-        <TextBox TextAlignment="Center" Grid.Row="2" Grid.Column="2"  Text="{Binding Path=Board[8], UpdateSourceTrigger=PropertyChanged}" Foreground="{Binding Path=Board[8], UpdateSourceTrigger=PropertyChanged, Converter={StaticResource charToBrushConverter}}" />
-
-    </Grid>
+            <TextBox TextAlignment="Center"  Grid.Row="0" Grid.Column="0"  Text="{Binding Path=Board[0],UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource TextBoxXO}" />
+            <TextBox TextAlignment="Center" Grid.Row="0" Grid.Column="1"  Text="{Binding Path=Board[1], UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource TextBoxXO}" />
+            <TextBox TextAlignment="Center" Grid.Row="0" Grid.Column="2"  Text="{Binding Path=Board[2], UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource TextBoxXO}" />
+            <TextBox TextAlignment="Center" Grid.Row="1" Grid.Column="0"  Text="{Binding Path=Board[3], UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource TextBoxXO}" />
+            <TextBox TextAlignment="Center" Grid.Row="1" Grid.Column="1"  Text="{Binding Path=Board[4], UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource TextBoxXO}" />
+            <TextBox TextAlignment="Center" Grid.Row="1" Grid.Column="2"  Text="{Binding Path=Board[5], UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource TextBoxXO}" />
+            <TextBox TextAlignment="Center" Grid.Row="2" Grid.Column="0"  Text="{Binding Path=Board[6], UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource TextBoxXO}" />
+            <TextBox TextAlignment="Center" Grid.Row="2" Grid.Column="1"  Text="{Binding Path=Board[7], UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource TextBoxXO}" />
+            <TextBox TextAlignment="Center" Grid.Row="2" Grid.Column="2"  Text="{Binding Path=Board[8], UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource TextBoxXO}" />
+        </Grid>
     </Grid>
 </Window>
