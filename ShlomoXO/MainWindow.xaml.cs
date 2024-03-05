@@ -28,5 +28,22 @@ namespace ShlomoXO
             DataContext = viewModel;
         }
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Button button = (Button)sender;
+            button.Content = viewModel.IsPlayerXTurn ? "X" : "O";
+            if (viewModel.IsPlayerXTurn)
+            {
+                button.Foreground = Brushes.Red;
+                viewModel.Board[int.Parse(button.Tag.ToString())] = 'X';
+            }
+            else
+            {
+                button.Foreground = Brushes.Green;
+                viewModel.Board[int.Parse(button.Tag.ToString())] = 'O';
+            }
+
+            viewModel.IsPlayerXTurn = !viewModel.IsPlayerXTurn;
+        }
     }
 }
